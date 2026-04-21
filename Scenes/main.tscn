@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://dc88gjn7cpjqr"]
 
-[ext_resource type="PackedScene" uid="uid://ci1umqwx8ujbl" path="res://Scenes/menu.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://ci1umqwx8ujbl" path="res://Scenes/main_menu/menu.tscn" id="1_jjgbg"]
 
 [node name="Root" type="Node2D" unique_id=70006866]
 
 [node name="Menu" parent="." unique_id=144933844 instance=ExtResource("1_jjgbg")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 11.0
+offset_top = -72.0
+offset_right = 651.0
+offset_bottom = 408.0
+grow_horizontal = 1
+grow_vertical = 1
