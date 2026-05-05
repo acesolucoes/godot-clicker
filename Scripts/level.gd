@@ -1,6 +1,6 @@
 extends Node2D
 
-const MyScene = preload("res://Scenes/random_character.tscn")
+const MyScene = preload("res://Scenes/random_character2.tscn")
 var _points: Array[Vector2] = []
 var _spriteDimension: Vector2
 @export var characters_amount : int = 5
@@ -8,7 +8,8 @@ var _spriteDimension: Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var instance = MyScene.instantiate()
-	var sp = instance as Sprite2D
+	var area = instance as Area2D
+	var sp = area.get_child(0) as Sprite2D
 	_spriteDimension = sp.texture.get_size()
 	var min_dimension = min(_spriteDimension[0]/2, _spriteDimension[1]/2)
 	instance.queue_free()
@@ -21,10 +22,11 @@ func _ready() -> void:
 	for index in range(len(_points)):
 		_points[index] = Vector2(rng.randf_range(min_dimension, 400.0), rng.randf_range(min_dimension, 400.0))
 		instance = MyScene.instantiate()
-		sp = instance as Sprite2D
-		sp.position = _points[index]
+		area = instance as Area2D
+		sp = area.get_child(0) as Sprite2D
+		area.position = _points[index]
 		
-		add_child(sp)
+		add_child(area)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

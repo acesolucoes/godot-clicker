@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cly7lscfys86"]
+
+[ext_resource type="PackedScene" uid="uid://biq7keoldboex" path="res://Scenes/random_character.tscn" id="1_dte2r"]
+[ext_resource type="Script" uid="uid://5tntgtp38vcd" path="res://Scripts/random_character_2.gd" id="1_xqxgg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dte2r"]
+size = Vector2(129, 129)
+
+[node name="RandomCharacter2" type="Area2D" unique_id=1352522646]
+script = ExtResource("1_xqxgg")
+
+[node name="RandomCharacter" parent="." unique_id=1558793643 instance=ExtResource("1_dte2r")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1650672257]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_dte2r")
+
+[connection signal="input_event" from="." to="." method="_on_input_event2"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

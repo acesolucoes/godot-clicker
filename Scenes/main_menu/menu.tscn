@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ci1umqwx8ujbl"]
 
 [ext_resource type="LabelSettings" uid="uid://bmny8p7o6r2cs" path="res://Resources/default_label_settings.tres" id="1_1rerr"]
-[ext_resource type="Script" uid="uid://r8uwctqlxh6j" path="res://Scenes/start.gd" id="2_xhh6f"]
+[ext_resource type="Script" uid="uid://r8uwctqlxh6j" path="res://Scripts/start.gd" id="2_xhh6f"]
+[ext_resource type="Script" uid="uid://dfsdv1p06ri1g" path="res://Scripts/exit.gd" id="3_63tvw"]
+[ext_resource type="Script" uid="uid://sd4saiheev5a" path="res://Scripts/credits.gd" id="3_pq1ke"]
 
 [node name="MainMenu" type="Control" unique_id=144933844]
 custom_minimum_size = Vector2(640, 480)
@@ -40,3 +42,16 @@ mouse_filter = 1
 mouse_default_cursor_shape = 2
 text = "Credits"
 label_settings = ExtResource("1_1rerr")
+script = ExtResource("3_pq1ke")
+
+[node name="Exit" type="Label" parent="Panel" unique_id=1627166698]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 92.0
+offset_right = 66.0
+offset_bottom = 140.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+text = "Exit"
+label_settings = ExtResource("1_1rerr")
+script = ExtResource("3_63tvw")
