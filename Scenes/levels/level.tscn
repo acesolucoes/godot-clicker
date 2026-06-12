@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8ybha2ywcblu"]
 
-[ext_resource type="Script" uid="uid://bw2lip4nno57" path="res://Scripts/level.gd" id="1_tumq0"]
-[ext_resource type="LabelSettings" uid="uid://bmny8p7o6r2cs" path="res://Resources/default_label_settings.tres" id="2_k5f4k"]
+[ext_resource type="Script" uid="uid://bw2lip4nno57" path="res://Scripts/level.gd" id="1_vbunw"]
+[ext_resource type="LabelSettings" uid="uid://bmny8p7o6r2cs" path="res://Resources/default_label_settings.tres" id="2_d6e32"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6phgx"]
 font_size = 32
@@ -10,7 +10,7 @@ shadow_size = 4
 shadow_color = Color(0.5220287, 0.03876, 0.050708726, 0.87200004)
 
 [node name="Level" type="Node2D" unique_id=160453220]
-script = ExtResource("1_tumq0")
+script = ExtResource("1_vbunw")
 
 [node name="ScoreText" type="Label" parent="." unique_id=1932588609]
 offset_left = 1019.0
@@ -26,4 +26,4 @@ offset_top = -6.0
 offset_right = 1152.0
 offset_bottom = 39.0
 text = "0"
-label_settings = ExtResource("2_k5f4k")
+label_settings = ExtResource("2_d6e32")

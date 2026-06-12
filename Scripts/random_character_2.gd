@@ -1,5 +1,7 @@
 extends Area2D
 
+signal enemy_hit
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -14,6 +16,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		var mouseEVent : InputEventMouseButton = event
 		if mouseEVent.button_index == MOUSE_BUTTON_LEFT:
 			queue_free()
+			enemy_hit.emit()
 
 
 func _on_input_event2(viewport: Node, event: InputEvent, shape_idx: int) -> void:
